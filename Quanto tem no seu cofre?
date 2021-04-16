@@ -1,0 +1,68 @@
+#include <iostream>
+
+#include <locale>
+
+using namespace std;
+
+int main()
+
+{
+	setlocale(LC_ALL, "ptb");
+	
+	float qtde005, total005, qtde010, total010, qtde025, total025, qtde050, total050, qtde1, total1, totalMoedas;
+	
+	cout <<"Quantas moedas de R$0,05 você tem? ";
+	cin >> qtde005;
+	total005 = qtde005*0.05;
+	{
+		if(total005>1)
+		cout <<"Você possui " << total005 << " reais de 5 centavos. ";
+		else
+		cout <<"Você possui " << total005 << " centavos de 5 centavos. ";
+	}
+		
+	cout <<"\n\nQuantas moedas de R$0,10 você tem? ";
+	cin >> qtde010;
+	total010 = qtde010*0.10;
+	{
+		if(total010>1)
+		cout <<"Você possui " << total010 << " reais de 10 centavos. ";
+		else
+		cout <<"Você possui " << total010 << " centavos de 10 centavos. ";
+		}	
+	
+	cout <<"\n\nQuantas moedas de R$0,25 você tem? ";
+	cin >> qtde025;
+	total025 = qtde025*0.25;
+	{
+		if(total025>1)
+		cout <<"Você possui " << total025 << " reais de 25 centavos. ";
+		else
+		cout <<"Você possui " << total025 << " centavos de 25 centavos. ";
+		}	
+	
+	cout <<"\n\nQuantas moedas de R$0,50 você tem? ";
+	cin >> qtde050;
+	total050 = qtde050*0.50;
+	{
+		if(total050>1)
+		cout <<"Você possui " << total050 << " reais de 50 centavos. ";
+		else
+		cout <<"Você possui " << total050 << " centavos. ";
+		}	
+	
+	cout <<"\n\nQuantas moedas de R$1,00 você tem? ";
+	cin >> qtde1;
+	total1 = qtde1*1;
+	{
+		if(total1==1)
+		cout <<"Você possui " << total1 << " real. ";
+		else
+		cout <<"Você possui " << total1 << " reais de 1 real. ";
+		}	
+	
+	totalMoedas = total005+total010+total025+total050+total1;
+	cout <<"\n\nVocê conseguiu juntar um total de " << totalMoedas << " reais.";
+	
+}
+
